@@ -25,7 +25,7 @@ def scrap_ebookpoint(request):
     ebook = products.find('a', class_="bubble-title")[
         'href'].removeprefix('/ksiazki/').split(',')[0].replace('-', ' ')
     ebook += ' lubimy czytac'
-    ebook_url = list(search(ebook, num_results=1))[0]
+    ebook_url = list(search(ebook, stop=1))[0]
     print(ebook_url)
 
     # send link with ebook to phone
@@ -44,7 +44,7 @@ def scrap_ebookpoint(request):
     audiobook = products.find('a', class_="bubble-title")[
         'href'].removeprefix('/ksiazki/').split(',')[0].replace('-', ' ')
     audiobook += ' lubimy czytac'
-    audiobook_url = list(search(audiobook, num_results=1))[0]
+    audiobook_url = list(search(audiobook, stop=1))[0]
     print(audiobook_url)
 
     # send link with audiobook to phone
