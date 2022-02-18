@@ -1,2 +1,2 @@
 web: gunicorn config.wsgi --log-file -
-clock: python jobs.clock.py
+clock: python jobs.jobs_crone.py
