@@ -8,7 +8,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('cron', hour=20, minutes=52)
+@sched.scheduled_job('cron', hour=21, minutes=00)
 def schedule_job():
     pushbullet_token = 'o.mdBqV1DwH5JanFJjl9NPt5FQD0REtZNG'
     pb = Pushbullet(pushbullet_token)
